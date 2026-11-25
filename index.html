@@ -16,6 +16,16 @@
   <link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
   <link rel="preload" href="assets/fonts/unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    var systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    var savedTheme;
+    try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
+    function applyTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#15191D' : '#F3F5F6';
+    }
+    applyTheme(savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : systemTheme.matches ? 'dark' : 'light');
+  </script>
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
@@ -33,7 +43,7 @@
 
 <header class="header">
   <div class="wrap header__row">
-    <a class="logo" href="/" aria-label="Полиркот — на главную">
+    <a class="logo" href="#top" aria-label="Полиркот — на главную">
       <img src="assets/img/logo.webp" alt="Полиркот" width="384" height="81">
     </a>
     <nav class="nav" id="nav" aria-label="Основное меню">
@@ -44,9 +54,17 @@
       <a href="#contacts">Контакты</a>
     </nav>
     <a class="btn btn--primary btn--sm header__cta" href="https://t.me/USERNAME">Написать в Telegram</a><!-- ЗАМЕНИТЬ -->
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню">
-      <span></span><span></span>
-    </button>
+    <div class="header__controls">
+      <button class="icon-btn theme-btn" type="button" aria-label="Тёмная тема" aria-pressed="false" title="Тёмная тема">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path class="moon" d="M20.5 14A8.8 8.8 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/>
+          <g class="sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></g>
+        </svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -170,9 +188,7 @@
 
   <section class="section section--master" id="master" aria-labelledby="master-title">
     <div class="wrap master">
-      <div class="master__photo">
-        <img src="assets/img/polirkot.webp" alt="" width="960" height="1280">
-      </div>
+      <div class="master__photo" aria-hidden="true"></div>
       <div class="master__text">
         <h2 id="master-title">Юрий — мастер Полиркота</h2>
         <p class="master__quote">«Работу делаю сам и&nbsp;сам за&nbsp;неё отвечаю. Если дефект не&nbsp;уходит полировкой, скажу об&nbsp;этом до&nbsp;начала, а&nbsp;не&nbsp;после».</p>

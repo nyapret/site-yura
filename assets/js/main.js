@@ -2,6 +2,27 @@
 (function () {
   var root = document.documentElement;
 
+  var themeButton = document.querySelector('.theme-btn');
+  function syncThemeButton() {
+    themeButton.setAttribute('aria-pressed', String(root.dataset.theme === 'dark'));
+  }
+  syncThemeButton();
+  themeButton.addEventListener('click', async function () {
+    var nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    var illustration = new Image();
+    illustration.src = nextTheme === 'dark' ? 'assets/img/polirkot-dark.webp' : 'assets/img/polirkot.webp';
+    try { await illustration.decode(); } catch (e) {}
+    savedTheme = nextTheme;
+    applyTheme(savedTheme);
+    syncThemeButton();
+    try { localStorage.setItem('theme', savedTheme); } catch (e) {}
+  });
+  systemTheme.addEventListener('change', function (event) {
+    if (savedTheme === 'light' || savedTheme === 'dark') return;
+    applyTheme(event.matches ? 'dark' : 'light');
+    syncThemeButton();
+  });
+
   // Один проход блика по «стеклу» после загрузки шрифтов
   var ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
   ready.then(function () { requestAnimationFrame(function () { root.classList.add('is-loaded'); }); });
@@ -24,6 +45,7 @@
     if (open) firstLink.focus();
   };
   btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+  header.querySelector('.logo').addEventListener('click', function () { setMenu(false); });
   nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', function (e) {
     if (!nav.classList.contains('is-open')) return;
