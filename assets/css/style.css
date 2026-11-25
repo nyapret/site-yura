@@ -319,7 +319,7 @@ p { margin: 0; text-wrap: pretty; }
   .nav a { font: 600 1.5rem/1.2 var(--font-display); color: var(--ink); padding: 18px 0; border-bottom: 1px solid var(--line); }
   .nav a::after { display: none; }
 
-  .pane { grid-template-columns: minmax(0, 1fr); min-height: 0; padding-bottom: 0; }
+  .pane { grid-template-columns: minmax(0, 1fr); min-height: 0; }
   .hero__cat { justify-self: end; margin-bottom: 16px; width: clamp(150px, 42vw, 220px); }
 
   .services { grid-template-columns: 1fr; border-top: 0; }
