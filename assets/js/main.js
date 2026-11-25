@@ -15,16 +15,23 @@
   // Мобильное меню
   var btn = document.querySelector('.menu-btn');
   var nav = document.getElementById('nav');
+  var firstLink = nav.querySelector('a');
   var setMenu = function (open) {
     btn.setAttribute('aria-expanded', String(open));
     btn.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
     nav.classList.toggle('is-open', open);
     document.body.style.overflow = open ? 'hidden' : '';
+    if (open) firstLink.focus();
   };
   btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
   nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && nav.classList.contains('is-open')) { setMenu(false); btn.focus(); }
+    if (!nav.classList.contains('is-open')) return;
+    if (e.key === 'Escape') { setMenu(false); btn.focus(); }
+    if (e.key === 'Tab' && e.target === (e.shiftKey ? firstLink : btn)) {
+      e.preventDefault();
+      (e.shiftKey ? btn : firstLink).focus();
+    }
   });
   window.matchMedia('(min-width: 901px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
 
