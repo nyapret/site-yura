@@ -65,6 +65,35 @@
     update();
   });
 
+  var reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  if ('IntersectionObserver' in window && !reducedMotion.matches) {
+    var blocks = document.querySelectorAll('[data-reveal]');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var block = entry.target;
+        var sibling = block.previousElementSibling;
+        var delay = 0;
+        while (sibling && sibling.hasAttribute('data-reveal') && sibling.offsetTop === block.offsetTop) {
+          delay = Math.min(delay + 55, 165);
+          sibling = sibling.previousElementSibling;
+        }
+        block.style.setProperty('--reveal-delay', delay + 'ms');
+        block.classList.replace('reveal-pending', 'reveal-enter');
+        observer.unobserve(block);
+      });
+    });
+    blocks.forEach(function (block) {
+      if (block.getBoundingClientRect().top < window.innerHeight) return;
+      block.classList.add('reveal-pending');
+      observer.observe(block);
+    });
+    reducedMotion.addEventListener('change', function () {
+      observer.disconnect();
+      blocks.forEach(function (block) { block.classList.remove('reveal-pending', 'reveal-enter'); });
+    }, { once: true });
+  }
+
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();

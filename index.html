@@ -33,7 +33,6 @@
 <body id="top">
 <!--
   ЗАМЕНИТЬ перед запуском (поиск по слову ЗАМЕНИТЬ):
-  - телефон: +7XXXXXXXXXX в href="tel:" и текст номера
   - Telegram: USERNAME в ссылках https://t.me/USERNAME
   - реквизиты ИП в подвале
   - фото работ: assets/img/works/ (см. README.md)
@@ -79,7 +78,7 @@
           <p class="hero__lead">Убираем царапины, следы дворников и&nbsp;мутность со&nbsp;стекла автомобиля, витрин, окон и&nbsp;душевых. Возвращаем кузову глубокий блеск.</p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="https://t.me/USERNAME">Отправить фото в&nbsp;Telegram</a><!-- ЗАМЕНИТЬ -->
-            <a class="btn btn--ghost" href="tel:+7XXXXXXXXXX">Позвонить</a><!-- ЗАМЕНИТЬ -->
+            <a class="btn btn--ghost" href="tel:+79774560456">Позвонить</a>
           </div>
           <p class="hero__fact" data-assumed>Оценка по фото — бесплатно и&nbsp;без обязательств</p>
         </div>
@@ -89,9 +88,9 @@
 
   <section class="section" id="services" aria-labelledby="services-title">
     <div class="wrap">
-      <h2 id="services-title">Что полируем и&nbsp;ремонтируем</h2>
+      <h2 id="services-title" data-reveal>Что полируем и&nbsp;ремонтируем</h2>
       <div class="services">
-        <article class="service">
+        <article class="service" data-reveal>
           <h3>Стекло автомобиля</h3>
           <ul>
             <li>Полировка лобового стекла от&nbsp;царапин и&nbsp;дорожек от&nbsp;дворников</li>
@@ -100,7 +99,7 @@
             <li>Боковые и&nbsp;задние стёкла</li>
           </ul>
         </article>
-        <article class="service">
+        <article class="service" data-reveal>
           <h3>Стекло в&nbsp;доме и&nbsp;бизнесе</h3>
           <ul>
             <li>Витрины и&nbsp;стеклянные двери: царапины, процарапанные надписи</li>
@@ -109,7 +108,7 @@
             <li>Зеркала, стеклянные столы и&nbsp;перегородки</li>
           </ul>
         </article>
-        <article class="service">
+        <article class="service" data-reveal>
           <h3>Кузов и&nbsp;фары</h3>
           <ul>
             <li>Восстановительная полировка: паутинка, голограммы, мелкие царапины</li>
@@ -119,19 +118,19 @@
           </ul>
         </article>
       </div>
-      <p class="services__note">Не&nbsp;нашли свою задачу? <a href="https://t.me/USERNAME">Пришлите фото</a> — скажем, берёмся&nbsp;ли.</p><!-- ЗАМЕНИТЬ -->
+      <p class="services__note" data-reveal>Не&nbsp;нашли свою задачу? <a href="https://t.me/USERNAME">Пришлите фото</a> — скажем, берёмся&nbsp;ли.</p><!-- ЗАМЕНИТЬ -->
     </div>
   </section>
 
   <section class="section section--works" id="works" aria-labelledby="works-title">
     <div class="wrap">
-      <div class="works__head">
+      <div class="works__head" data-reveal>
         <h2 id="works-title">До и&nbsp;после</h2>
         <p>Потяните ползунок, чтобы сравнить. Сейчас здесь демонстрация, скоро появятся фото наших работ.</p>
       </div>
       <div class="works">
         <!-- ЗАМЕНИТЬ: положите свои фото в assets/img/works/ и поменяйте src. Пары снимать с одной точки. -->
-        <figure class="ba" style="--pos:50%">
+        <figure class="ba" data-reveal style="--pos:50%">
           <img class="ba__after" src="assets/img/demo/windshield-after.svg" alt="Лобовое стекло после полировки: прозрачное, без следов дворников" loading="lazy" width="1200" height="900">
           <img class="ba__before" src="assets/img/demo/windshield-before.svg" alt="Лобовое стекло до полировки: дуги от дворников и мелкие царапины" loading="lazy" width="1200" height="900">
           <span class="ba__tag ba__tag--before" aria-hidden="true">До</span>
@@ -140,7 +139,7 @@
           <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Сравнение до и после: лобовое стекло">
           <figcaption>Лобовое стекло — следы дворников</figcaption>
         </figure>
-        <figure class="ba" style="--pos:50%">
+        <figure class="ba" data-reveal style="--pos:50%">
           <img class="ba__after" src="assets/img/demo/shopwindow-after.svg" alt="Витрина после полировки: царапины удалены" loading="lazy" width="1200" height="900">
           <img class="ba__before" src="assets/img/demo/shopwindow-before.svg" alt="Витрина до полировки: длинные процарапанные линии" loading="lazy" width="1200" height="900">
           <span class="ba__tag ba__tag--before" aria-hidden="true">До</span>
@@ -149,7 +148,7 @@
           <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Сравнение до и после: витрина">
           <figcaption>Витрина магазина — процарапанные линии</figcaption>
         </figure>
-        <figure class="ba" style="--pos:50%">
+        <figure class="ba" data-reveal style="--pos:50%">
           <img class="ba__after" src="assets/img/demo/paint-after.svg" alt="Кузов после полировки: глубокий чистый блеск" loading="lazy" width="1200" height="900">
           <img class="ba__before" src="assets/img/demo/paint-before.svg" alt="Кузов до полировки: паутинка и голограммы вокруг блика" loading="lazy" width="1200" height="900">
           <span class="ba__tag ba__tag--before" aria-hidden="true">До</span>
@@ -164,21 +163,21 @@
 
   <section class="section" id="how" aria-labelledby="how-title">
     <div class="wrap">
-      <h2 id="how-title">Как проходит работа</h2>
+      <h2 id="how-title" data-reveal>Как проходит работа</h2>
       <ol class="steps">
-        <li>
+        <li data-reveal>
           <h3>Пришлите фото</h3>
           <p>В&nbsp;Telegram или по&nbsp;телефону. Снимите дефект при дневном свете, лучше с&nbsp;двух ракурсов.</p>
         </li>
-        <li>
+        <li data-reveal>
           <h3>Честная оценка</h3>
           <p>Скажем, уйдёт&nbsp;ли дефект полировкой, и&nbsp;назовём цену. Если царапина слишком глубокая — предупредим сразу, до&nbsp;начала работ.</p>
         </li>
-        <li>
+        <li data-reveal>
           <h3>Работа</h3>
           <p>Договариваемся о&nbsp;дне и&nbsp;месте. Перед полировкой закрываем уплотнители, пластик и&nbsp;всё, что рядом.</p>
         </li>
-        <li>
+        <li data-reveal>
           <h3>Приёмка при свете</h3>
           <p data-assumed>Проверяете результат под лампой и&nbsp;на&nbsp;солнце.</p>
         </li>
@@ -187,7 +186,7 @@
   </section>
 
   <section class="section section--master" id="master" aria-labelledby="master-title">
-    <div class="wrap master">
+    <div class="wrap master" data-reveal>
       <div class="master__photo" aria-hidden="true"></div>
       <div class="master__text">
         <h2 id="master-title">Юрий — мастер Полиркота</h2>
@@ -199,17 +198,17 @@
   </section>
 
   <section class="section section--dark" id="contacts" aria-labelledby="contacts-title">
-    <div class="wrap contacts">
+    <div class="wrap contacts" data-reveal>
       <div>
         <h2 id="contacts-title">Пришлите фото — ответим, что можно сделать</h2>
         <p class="contacts__lead">Быстрее всего — в&nbsp;Telegram: фото и&nbsp;пара слов о&nbsp;задаче.</p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="https://t.me/USERNAME">Написать в&nbsp;Telegram</a><!-- ЗАМЕНИТЬ -->
-          <a class="btn btn--light" href="tel:+7XXXXXXXXXX">Позвонить</a><!-- ЗАМЕНИТЬ -->
+          <a class="btn btn--light" href="tel:+79774560456">Позвонить</a>
         </div>
       </div>
       <dl class="contacts__list">
-        <div><dt>Телефон</dt><dd><a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a></dd></div><!-- ЗАМЕНИТЬ -->
+        <div><dt>Телефон</dt><dd><a href="tel:+79774560456">8-977-456-0-456</a></dd></div>
         <div><dt>Telegram</dt><dd><a href="https://t.me/USERNAME">@USERNAME</a></dd></div><!-- ЗАМЕНИТЬ -->
         <div><dt>Где работаем</dt><dd data-assumed>Москва и&nbsp;ближнее Подмосковье</dd></div>
         <div><dt>Когда</dt><dd data-assumed>Ежедневно, 9:00–21:00</dd></div>
@@ -229,7 +228,7 @@
 </footer>
 
 <div class="action-bar" aria-label="Быстрая связь">
-  <a class="btn btn--ghost" href="tel:+7XXXXXXXXXX">Позвонить</a><!-- ЗАМЕНИТЬ -->
+  <a class="btn btn--ghost" href="tel:+79774560456">Позвонить</a>
   <a class="btn btn--primary" href="https://t.me/USERNAME">Telegram</a><!-- ЗАМЕНИТЬ -->
 </div>
 </body>

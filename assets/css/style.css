@@ -254,7 +254,7 @@ p { margin: 0; text-wrap: pretty; }
   box-shadow: var(--shadow);
   transition: transform .15s ease;
 }
-.ba:hover .ba__handle::after { transform: translate(-50%, -50%) scale(1.06); }
+
 .ba__range {
   position: absolute; inset: 0; width: 100%; height: 100%; margin: 0;
   opacity: 0; cursor: ew-resize; z-index: 3; touch-action: pan-y;
@@ -378,6 +378,27 @@ p { margin: 0; text-wrap: pretty; }
   .steps { grid-template-columns: 1fr; }
   .hero__actions .btn { width: 100%; padding-inline: 12px; white-space: normal; text-align: center; }
   .hero h1 { font-size: clamp(1.75rem, 8.2vw, 2.4rem); }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .reveal-pending:not(:focus-within) { opacity: 0; }
+  .reveal-enter { animation: reveal-in 600ms cubic-bezier(.22, 1, .36, 1) var(--reveal-delay) backwards; }
+  .reveal-enter:focus-within { animation-duration: 0s; animation-delay: 0s; }
+  @keyframes reveal-in { from { opacity: 0; transform: translateY(20px); } }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .service { position: relative; overflow: hidden; isolation: isolate; }
+  .service::after {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background: var(--surface); opacity: 0; transform: scale(.98);
+    transition: opacity 450ms var(--ease-out), transform 450ms var(--ease-out);
+  }
+  .service:hover::after { opacity: 1; transform: scale(1.04); }
+  .ba img { transform-origin: var(--pos) 50%; transition: transform 450ms var(--ease-out); }
+  .ba:hover img { transform: scale(1.045); }
+  .ba__handle::after { transition-duration: 450ms; }
+  .ba:hover .ba__handle::after { transform: translate(-50%, -50%) scale(1.05); }
 }
 
 @media (prefers-reduced-motion: reduce) {
