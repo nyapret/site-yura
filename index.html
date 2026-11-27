@@ -3,232 +3,353 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Полиркот — полировка стекла и кузова в Москве</title>
-  <meta name="description" content="Убираем царапины и следы дворников со стекла автомобиля, витрин, окон и душевых. Ремонт сколов, полировка кузова и фар. Оценка по фото в Telegram.">
+  <title>Полиркот — полировка лобового стекла и кузова автомобиля в Москве</title>
+  <meta name="description" content="Полировка автомобильных стёкол и кузова, ремонт сколов и трещин стекла, восстановление автомобильных фар. Бесплатная оценка по фото. Москва и ближнее Подмосковье.">
   <link rel="canonical" href="https://polirkot.ru/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:site_name" content="Полиркот">
-  <meta property="og:title" content="Полиркот — полировка стекла и кузова в Москве">
+  <meta property="og:title" content="Полиркот — полировка лобового стекла и кузова автомобиля в Москве">
   <meta property="og:description" content="Царапины на стекле, следы дворников, паутинка на кузове. Пришлите фото — скажем, что уберётся.">
   <meta property="og:url" content="https://polirkot.ru/">
-  <meta name="theme-color" content="#F3F5F6">
+  <meta name="theme-color" content="#171B1A">
   <link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
   <link rel="preload" href="assets/fonts/unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
-  <script>
-    var systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
-    var savedTheme;
-    try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
-    function applyTheme(theme) {
-      document.documentElement.dataset.theme = theme;
-      document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#15191D' : '#F3F5F6';
-    }
-    applyTheme(savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : systemTheme.matches ? 'dark' : 'light');
-  </script>
-  <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/main.js" defer></script>
+  <meta property="og:image" content="https://polirkot.ru/assets/img/polirkot-dark.webp">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js" defer>
+</script>
+<!-- TODO: Вставить код счётчика Яндекс Метрики -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoRepair","name":"Полиркот","url":"https://polirkot.ru/","telephone":"+79774560456","openingHours":"Mo-Su 09:00-21:00","areaServed":["Москва","Ближнее Подмосковье"]}</script>
 </head>
 <body id="top">
-<!--
-  ЗАМЕНИТЬ перед запуском (поиск по слову ЗАМЕНИТЬ):
-  - реквизиты ИП в подвале
-  - фото работ: assets/img/works/ (см. README.md)
-  Факты с атрибутом data-assumed — допущения, проверить с Юрием.
--->
-<a class="skip" href="#main">Перейти к содержимому</a>
-
-<header class="header">
-  <div class="wrap header__row">
-    <a class="logo" href="#top" aria-label="Полиркот — на главную">
-      <img src="assets/img/logo.webp" alt="Полиркот" width="384" height="81">
-    </a>
-    <nav class="nav" id="nav" aria-label="Основное меню">
-      <a href="#services">Услуги</a>
-      <a href="#works">Работы</a>
-      <a href="#how">Как работаем</a>
-      <a href="#master">Мастер</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
-    <a class="btn btn--primary btn--sm header__cta" href="https://t.me/polirkot_bot?start=photo">Написать в Telegram</a>
-    <div class="header__controls">
-      <button class="icon-btn theme-btn" type="button" aria-label="Тёмная тема" aria-pressed="false" title="Тёмная тема">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path class="moon" d="M20.5 14A8.8 8.8 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/>
-          <g class="sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></g>
-        </svg>
-      </button>
-      <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main id="main">
-
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="wrap">
-      <div class="pane">
-        <div class="pane__glint" aria-hidden="true"></div>
-        <div class="hero__text">
-          <h1 id="hero-title">Полировка стекла и&nbsp;кузова в&nbsp;Москве</h1>
-          <p class="hero__lead">Убираем царапины, следы дворников и&nbsp;мутность со&nbsp;стекла автомобиля, витрин, окон и&nbsp;душевых. Возвращаем кузову глубокий блеск.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="https://t.me/polirkot_bot?start=photo">Отправить фото в&nbsp;Telegram</a>
-            <a class="btn btn--ghost" href="tel:+79774560456">Позвонить</a>
-          </div>
-          <p class="hero__fact" data-assumed>Оценка по фото — бесплатно и&nbsp;без обязательств</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="services" aria-labelledby="services-title">
-    <div class="wrap">
-      <h2 id="services-title" data-reveal>Что полируем и&nbsp;ремонтируем</h2>
-      <div class="services">
-        <article class="service" data-reveal>
-          <h3>Стекло автомобиля</h3>
-          <ul>
-            <li>Полировка лобового стекла от&nbsp;царапин и&nbsp;дорожек от&nbsp;дворников</li>
-            <li>Удаление помутнения и&nbsp;«пескоструя» — стекло снова прозрачное ночью</li>
-            <li>Ремонт сколов и&nbsp;небольших трещин без замены стекла</li>
-            <li>Боковые и&nbsp;задние стёкла</li>
-          </ul>
-        </article>
-        <article class="service" data-reveal>
-          <h3>Стекло в&nbsp;доме и&nbsp;бизнесе</h3>
-          <ul>
-            <li>Витрины и&nbsp;стеклянные двери: царапины, процарапанные надписи</li>
-            <li>Окна и&nbsp;стеклопакеты после ремонта и&nbsp;строительной пыли</li>
-            <li>Душевые кабины: известковый налёт и&nbsp;матовые разводы</li>
-            <li>Зеркала, стеклянные столы и&nbsp;перегородки</li>
-          </ul>
-        </article>
-        <article class="service" data-reveal>
-          <h3>Кузов и&nbsp;фары</h3>
-          <ul>
-            <li>Восстановительная полировка: паутинка, голограммы, мелкие царапины</li>
-            <li data-assumed>Защитное покрытие после полировки</li>
-            <li>Полировка помутневших фар</li>
-            <li>Локальная полировка одной детали</li>
-          </ul>
-        </article>
-      </div>
-      <p class="services__note" data-reveal>Не&nbsp;нашли свою задачу? <a href="https://t.me/polirkot_bot?start=photo">Пришлите фото</a> — скажем, берёмся&nbsp;ли.</p>
-    </div>
-  </section>
-
-  <section class="section section--works" id="works" aria-labelledby="works-title">
-    <div class="wrap">
-      <div class="works__head" data-reveal>
-        <h2 id="works-title">До и&nbsp;после</h2>
-        <p>Потяните ползунок, чтобы сравнить. Сейчас здесь демонстрация, скоро появятся фото наших работ.</p>
-      </div>
-      <div class="works">
-        <!-- ЗАМЕНИТЬ: положите свои фото в assets/img/works/ и поменяйте src. Пары снимать с одной точки. -->
-        <figure class="ba" data-reveal style="--pos:50%">
-          <img class="ba__after" src="assets/img/demo/windshield-after.svg" alt="Лобовое стекло после полировки: прозрачное, без следов дворников" loading="lazy" width="1200" height="900">
-          <img class="ba__before" src="assets/img/demo/windshield-before.svg" alt="Лобовое стекло до полировки: дуги от дворников и мелкие царапины" loading="lazy" width="1200" height="900">
-          <span class="ba__tag ba__tag--before" aria-hidden="true">До</span>
-          <span class="ba__tag ba__tag--after" aria-hidden="true">После</span>
-          <span class="ba__handle" aria-hidden="true"></span>
-          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Сравнение до и после: лобовое стекло">
-          <figcaption>Лобовое стекло — следы дворников</figcaption>
-        </figure>
-        <figure class="ba" data-reveal style="--pos:50%">
-          <img class="ba__after" src="assets/img/demo/shopwindow-after.svg" alt="Витрина после полировки: царапины удалены" loading="lazy" width="1200" height="900">
-          <img class="ba__before" src="assets/img/demo/shopwindow-before.svg" alt="Витрина до полировки: длинные процарапанные линии" loading="lazy" width="1200" height="900">
-          <span class="ba__tag ba__tag--before" aria-hidden="true">До</span>
-          <span class="ba__tag ba__tag--after" aria-hidden="true">После</span>
-          <span class="ba__handle" aria-hidden="true"></span>
-          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Сравнение до и после: витрина">
-          <figcaption>Витрина магазина — процарапанные линии</figcaption>
-        </figure>
-        <figure class="ba" data-reveal style="--pos:50%">
-          <img class="ba__after" src="assets/img/demo/paint-after.svg" alt="Кузов после полировки: глубокий чистый блеск" loading="lazy" width="1200" height="900">
-          <img class="ba__before" src="assets/img/demo/paint-before.svg" alt="Кузов до полировки: паутинка и голограммы вокруг блика" loading="lazy" width="1200" height="900">
-          <span class="ba__tag ba__tag--before" aria-hidden="true">До</span>
-          <span class="ba__tag ba__tag--after" aria-hidden="true">После</span>
-          <span class="ba__handle" aria-hidden="true"></span>
-          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Сравнение до и после: кузов">
-          <figcaption>Кузов — паутинка на солнце</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="how" aria-labelledby="how-title">
-    <div class="wrap">
-      <h2 id="how-title" data-reveal>Как проходит работа</h2>
-      <ol class="steps">
-        <li data-reveal>
-          <h3>Пришлите фото</h3>
-          <p>В&nbsp;Telegram или по&nbsp;телефону. Снимите дефект при дневном свете, лучше с&nbsp;двух ракурсов.</p>
-        </li>
-        <li data-reveal>
-          <h3>Честная оценка</h3>
-          <p>Скажем, уйдёт&nbsp;ли дефект полировкой, и&nbsp;назовём цену. Если царапина слишком глубокая — предупредим сразу, до&nbsp;начала работ.</p>
-        </li>
-        <li data-reveal>
-          <h3>Работа</h3>
-          <p>Договариваемся о&nbsp;дне и&nbsp;месте. Перед полировкой закрываем уплотнители, пластик и&nbsp;всё, что рядом.</p>
-        </li>
-        <li data-reveal>
-          <h3>Приёмка при свете</h3>
-          <p data-assumed>Проверяете результат под лампой и&nbsp;на&nbsp;солнце.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section section--master" id="master" aria-labelledby="master-title">
-    <div class="wrap master" data-reveal>
-      <div class="master__photo" aria-hidden="true"></div>
-      <div class="master__text">
-        <h2 id="master-title">Юрий — мастер Полиркота</h2>
-        <p class="master__quote">«Работу делаю сам и&nbsp;сам за&nbsp;неё отвечаю. Если дефект не&nbsp;уходит полировкой, скажу об&nbsp;этом до&nbsp;начала, а&nbsp;не&nbsp;после».</p>
-        <p>Рыжий кот на&nbsp;логотипе — главный по&nbsp;приёмке. Пока не&nbsp;пропустил ни&nbsp;одной царапины.</p>
-        <p class="master__motto">Мотор мурчит, когда машина блестит.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--dark" id="contacts" aria-labelledby="contacts-title">
-    <div class="wrap contacts" data-reveal>
-      <div>
-        <h2 id="contacts-title">Пришлите фото — ответим, что можно сделать</h2>
-        <p class="contacts__lead">Быстрее всего — в&nbsp;Telegram: фото и&nbsp;пара слов о&nbsp;задаче.</p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="https://t.me/polirkot_bot?start=photo">Написать в&nbsp;Telegram</a>
-          <a class="btn btn--light" href="tel:+79774560456">Позвонить</a>
-        </div>
-      </div>
-      <dl class="contacts__list">
-        <div><dt>Телефон</dt><dd><a href="tel:+79774560456">8-977-456-0-456</a></dd></div>
-        <div><dt>Telegram</dt><dd><a href="https://t.me/polirkot_bot?start=photo">@polirkot_bot</a></dd></div>
-        <div><dt>Где работаем</dt><dd data-assumed>Москва и&nbsp;ближнее Подмосковье</dd></div>
-        <div><dt>Когда</dt><dd data-assumed>Ежедневно, 9:00–21:00</dd></div>
-      </dl>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="wrap footer__row">
-    <a class="logo" href="#top" aria-label="Полиркот — наверх"><img src="assets/img/logo.webp" alt="Полиркот" width="384" height="81"></a>
-    <p>© <span id="year">2026</span> Полиркот · polirkot.ru</p>
-    <p>ИП Фамилия Юрий Отчество · ИНН XXXXXXXXXXXX</p><!-- ЗАМЕНИТЬ -->
-    <a href="#top">Наверх</a>
-  </div>
-</footer>
-
-<div class="action-bar" aria-label="Быстрая связь">
-  <a class="btn btn--ghost" href="tel:+79774560456">Позвонить</a>
-  <a class="btn btn--primary" href="https://t.me/polirkot_bot?start=photo">Telegram</a>
+<a class="skip" href="#main">К содержимому</a>
+<header>
+<div class="wrap bar">
+<a class="brand" href="#top">
+<img src="assets/img/logo.webp" alt="Полиркот">
+</a>
+<nav id="nav">
+<a href="#services">Услуги</a>
+<a href="#works">Наши работы</a>
+<a href="#how">Как работаем</a>
+<a href="#master">О мастере</a>
+<a href="#contacts">Контакты</a>
+</nav>
+<a class="btn" href="#contacts">Отправить фото <span aria-hidden="true">↗</span>
+</a>
+<button class="menu" aria-label="Меню" aria-controls="nav" aria-expanded="false">☰</button>
 </div>
+</header>
+<main id="main">
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<p class="label">Москва и ближнее Подмосковье</p>
+<h1>Восстанавливаем стёкла и кузов автомобилей</h1>
+<p class="lead">Полировка стёкол и кузова, ремонт сколов и трещин, восстановление фар. Работаем в мастерской и с выездом.</p>
+<div class="actions">
+<a class="btn" href="#contacts">Отправить фото <span aria-hidden="true">↗</span>
+</a>
+<a class="btn outline" data-goal="phone" href="tel:+79774560456">Позвонить</a>
+</div>
+<p class="note">Предварительная оценка по фотографиям — бесплатно</p>
+</div>
+<figure class="hero-art">
+<img src="assets/img/demo/headlight-after.svg" alt="Стилизованный крупный план фары и полированного кузова">
+<figcaption>Автомобильная оптика <span>Деталь крупным планом</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="services" class="light">
+<div class="wrap">
+<h2>Автомобильные услуги</h2>
+<div class="services">
+<article>
+<img src="assets/img/demo/windshield-after.svg" alt="Полировка автомобильных стёкол — иллюстрация" loading="lazy">
+<div>
+<h3>Полировка автомобильных стёкол</h3>
+<p>Удаление царапин, следов дворников, помутнения и последствий пескоструя. Восстановление прозрачности автомобильного стекла.</p>
+<details>
+<summary>Подробнее</summary>
+<p>Для оценки пришлите общий вид лобового стекла и крупный план царапин при боковом освещении.</p>
+</details>
+<a class="text-link" href="#contacts">Отправить фото ↗</a>
+</div>
+</article>
+<article>
+<img src="assets/img/demo/windshield-before.svg" alt="Ремонт сколов и трещин — иллюстрация" loading="lazy">
+<div>
+<h3>Ремонт сколов и трещин</h3>
+<p>Восстановление повреждённого автомобильного стекла с использованием специальных материалов. Возможность ремонта определяется индивидуально с учётом характера и расположения повреждения.</p>
+<details>
+<summary>Подробнее</summary>
+<p>Снимите скол снаружи и из салона. На общем плане должно быть видно расстояние до края стекла.</p>
+</details>
+<a class="text-link" href="#contacts">Отправить фото ↗</a>
+</div>
+</article>
+<article>
+<img src="assets/img/demo/paint-after.svg" alt="Полировка кузова — иллюстрация" loading="lazy">
+<div>
+<h3>Полировка кузова</h3>
+<p>Устранение мелких царапин, голограмм и паутинки. Восстановление глубины цвета и блеска лакокрасочного покрытия.</p>
+<details>
+<summary>Подробнее</summary>
+<p>Сфотографируйте деталь целиком и отдельно участок, где в отражении света видны следы износа.</p>
+</details>
+<a class="text-link" href="#contacts">Отправить фото ↗</a>
+</div>
+</article>
+<article>
+<img src="assets/img/demo/headlight-after.svg" alt="Восстановление фар — иллюстрация" loading="lazy">
+<div>
+<h3>Восстановление фар</h3>
+<p>Удаление помутнения, восстановление прозрачности и внешнего вида автомобильной оптики.</p>
+<details>
+<summary>Подробнее</summary>
+<p>Пришлите снимки обеих фар и крупный план помутнения. Мастер оценит состояние наружной поверхности.</p>
+</details>
+<a class="text-link" href="#contacts">Отправить фото ↗</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section id="works">
+<div class="wrap">
+<h2>Примеры работ</h2>
+<p>До и после на иллюстрациях. Фотографии работ появятся здесь позже.</p>
+<div class="filters" aria-label="Категории работ">
+<button aria-pressed="true" aria-controls="case-0">Стёкла</button>
+<button aria-pressed="false" aria-controls="case-1">Кузов</button>
+<button aria-pressed="false" aria-controls="case-2">Фары</button>
+<button aria-pressed="false" aria-controls="case-3">Интерьерное стекло</button>
+</div>
+<article id="case-0" class="case">
+<div class="compare">
+<img src="assets/img/demo/windshield-after.svg" alt="Следы дворников после восстановления — иллюстрация" loading="lazy">
+<img src="assets/img/demo/windshield-before.svg" alt="Следы дворников до восстановления — иллюстрация" loading="lazy">
+<span class="before">До</span>
+<span class="after">После</span>
+<i aria-hidden="true">↔</i>
+<input type="range" value="50" aria-label="Сравнить до и после — Стёкла">
+</div>
+<div class="case-copy">
+<h3>Следы дворников</h3>
+<dl>
+<dt>Исходный дефект</dt>
+<dd>Дуги и мелкие царапины в зоне очистки.</dd>
+<dt>Что сделали</dt>
+<dd>Полировка рабочей зоны стекла.</dd>
+<dt>Результат на иллюстрации</dt>
+<dd>Более прозрачное стекло без выраженных дуг.</dd>
+</dl>
+</div>
+</article>
+<article id="case-1" class="case" hidden>
+<div class="compare">
+<img src="assets/img/demo/paint-after.svg" alt="Паутинка на лаке после восстановления — иллюстрация" loading="lazy">
+<img src="assets/img/demo/paint-before.svg" alt="Паутинка на лаке до восстановления — иллюстрация" loading="lazy">
+<span class="before">До</span>
+<span class="after">После</span>
+<i aria-hidden="true">↔</i>
+<input type="range" value="50" aria-label="Сравнить до и после — Кузов">
+</div>
+<div class="case-copy">
+<h3>Паутинка на лаке</h3>
+<dl>
+<dt>Исходный дефект</dt>
+<dd>Круговые риски видны в отражённом свете.</dd>
+<dt>Что сделали</dt>
+<dd>Полировка лакокрасочного покрытия.</dd>
+<dt>Результат на иллюстрации</dt>
+<dd>Более ровное отражение и глубокий цвет.</dd>
+</dl>
+</div>
+</article>
+<article id="case-2" class="case" hidden>
+<div class="compare">
+<img src="assets/img/demo/headlight-after.svg" alt="Помутнение оптики после восстановления — иллюстрация" loading="lazy">
+<img src="assets/img/demo/headlight-before.svg" alt="Помутнение оптики до восстановления — иллюстрация" loading="lazy">
+<span class="before">До</span>
+<span class="after">После</span>
+<i aria-hidden="true">↔</i>
+<input type="range" value="50" aria-label="Сравнить до и после — Фары">
+</div>
+<div class="case-copy">
+<h3>Помутнение оптики</h3>
+<dl>
+<dt>Исходный дефект</dt>
+<dd>Матовая наружная поверхность рассеивала свет.</dd>
+<dt>Что сделали</dt>
+<dd>Восстановление прозрачности рассеивателя.</dd>
+<dt>Результат на иллюстрации</dt>
+<dd>Чётче видны внутренние элементы фары.</dd>
+</dl>
+</div>
+</article>
+<article id="case-3" class="case" hidden>
+<div class="compare">
+<img src="assets/img/demo/shopwindow-after.svg" alt="Царапины на витрине после восстановления — иллюстрация" loading="lazy">
+<img src="assets/img/demo/shopwindow-before.svg" alt="Царапины на витрине до восстановления — иллюстрация" loading="lazy">
+<span class="before">До</span>
+<span class="after">После</span>
+<i aria-hidden="true">↔</i>
+<input type="range" value="50" aria-label="Сравнить до и после — Интерьерное стекло">
+</div>
+<div class="case-copy">
+<h3>Царапины на витрине</h3>
+<dl>
+<dt>Исходный дефект</dt>
+<dd>Следы на стекле мешали обзору.</dd>
+<dt>Что сделали</dt>
+<dd>Локальная полировка поверхности.</dd>
+<dt>Результат на иллюстрации</dt>
+<dd>Стекло выглядит прозрачнее.</dd>
+</dl>
+</div>
+</article>
+</div>
+</section>
+<section class="light" id="how">
+<div class="wrap">
+<h2>Как проходит работа</h2>
+<div class="steps">
+<article>
+<div class="step-no">01<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M3 6h5l2-3h5l2 3h4v14H3z M16 13a4 4 0 1 1-8 0 4 4 0 0 1 8 0"/>
+</svg>
+</div>
+<h3>Отправьте фотографии</h3>
+<p>Пришлите фотографии стекла или кузова в любой удобный для вас мессенджер. Также можно просто позвонить нам.</p>
+</article>
+<article>
+<div class="step-no">02<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0 M15 15l6 6"/>
+</svg>
+</div>
+<h3>Получите оценку</h3>
+<p>Изучим фотографии, оценим состояние поверхности, расскажем о возможных способах восстановления и сориентируем по стоимости.</p>
+<p>Если для точной оценки потребуется личный осмотр, обязательно сообщим об этом заранее.</p>
+</article>
+<article>
+<div class="step-no">03<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M3 6h18v15H3z M7 3v6 M17 3v6 M3 11h18"/>
+</svg>
+</div>
+<h3>Согласуем условия</h3>
+<p>Обсудим объём работ, удобные дату и время, а также место проведения. До начала работ вы будете знать, что именно предстоит сделать и сколько это будет стоить.</p>
+</article>
+<article>
+<div class="step-no">04<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M12 2l8 4v6q0 6-8 10-8-4-8-10V6z M8 12l3 3 5-6"/>
+</svg>
+</div>
+<h3>Выполним работу и проверим результат</h3>
+<p>Аккуратно выполним необходимые работы, проверим результат и покажем его вам.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="interior">
+<div class="wrap split">
+<img src="assets/img/demo/shopwindow-after.svg" alt="Иллюстрация стеклянной витрины" loading="lazy">
+<div>
+<h2>Восстановление стекла для дома и бизнеса</h2>
+<p>Помогаем вернуть стеклянным поверхностям прозрачность и аккуратный внешний вид. Работаем с витринами, окнами, душевыми кабинами, зеркалами и стеклянными перегородками.</p>
+<ul>
+<li>Полировка витрин и окон, стеклянных дверей и стеклопакетов</li>
+<li>Полировка стекла душевой кабины, зеркал и перегородок</li>
+<li>Удаление царапин со стекла, следов строительных работ и известкового налёта</li>
+</ul>
+<p>Возможность и условия работы определяем индивидуально для каждого объекта.</p>
+<a class="btn" href="#contacts">Оценить состояние стекла ↗</a>
+</div>
+</div>
+</section>
+<section id="master">
+<div class="wrap split">
+<div class="master-media">
+<div class="master-portrait">
+<svg aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+<circle cx="20" cy="13" r="6"/><path d="M8 33v-3a12 12 0 0 1 24 0v3"/>
+</svg>
+<span>Здесь появится фотография Юрия</span>
+</div>
+<figure class="mascot-card">
+<img class="master-mascot" src="assets/img/polirkot-dark.webp" alt="Полиркот — фирменный рыжий кот в зелёной жилетке" width="810" height="1080" loading="lazy">
+<figcaption>Полиркот · маскот</figcaption>
+</figure>
+</div>
+<div>
+<p class="label">О мастере</p>
+<h2>За результат отвечает мастер, а не администратор</h2>
+<p>Меня зовут Юрий. Я лично занимаюсь восстановлением автомобильных стёкол и кузова, а также работаю с различными стеклянными поверхностями.</p>
+<p>Каждый случай оцениваю индивидуально. Перед началом объясняю, что можно сделать, какого результата можно ожидать и сколько это будет стоить.</p>
+<p>Не обещаю невозможного и не предлагаю лишних услуг. Моя задача — качественно выполнить работу и получить результат, которым можно гордиться.</p>
+</div>
+</div>
+</section>
+<section class="light" id="reviews">
+<div class="wrap">
+<h2>Отзывы клиентов</h2>
+<article class="review">
+<h3>Уже были у Юрия?</h3>
+<p>Расскажите мастеру, с какой задачей вы обратились и каким получился результат. Здесь появятся отзывы клиентов с их разрешения.</p>
+<a class="text-link" data-goal="telegram" href="https://t.me/polirkot_bot">Написать в Telegram ↗</a>
+</article>
+<template id="review-template">
+<article class="review">
+<h3>
+<!-- Имя клиента -->
+</h3>
+<blockquote>
+<!-- Текст отзыва -->
+</blockquote>
+<img loading="lazy" alt="Скриншот отзыва клиента">
+<a>Оригинал отзыва</a>
+</article>
+</template>
+</div>
+</section>
+<section id="contacts">
+<div class="wrap split">
+<div>
+<h2>Есть задача? Давайте обсудим</h2>
+<p>Пришлите фотографии повреждения или поверхности. Посмотрим, что можно сделать, расскажем о возможных вариантах восстановления и сориентируем по стоимости.</p>
+<p>Москва и ближнее Подмосковье<br>Ежедневно, 9:00–21:00<br>В мастерской и с выездом к клиенту</p>
+</div>
+<div class="channels">
+<h3>Как вам удобнее связаться?</h3>
+<form id="contact-form" action="https://t.me/polirkot_bot" method="get">
+<input type="hidden" name="start" value="photo">
+<button data-goal="telegram">Telegram <small>@polirkot_bot ↗</small>
+</button>
+</form>
+<!-- TODO: вставить ссылку на WhatsApp бота -->
+<a href="#whatsapp-placeholder" data-placeholder="whatsapp-url" data-goal="whatsapp">WhatsApp <small>Скоро</small>
+</a>
+<p id="whatsapp-placeholder" role="status">WhatsApp пока подключаем. Отправьте фотографии в Telegram или позвоните Юрию.</p>
+<a data-goal="phone" href="tel:+79774560456">Телефон <small>8-977-456-0-456 ↗</small>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<strong>Полиркот</strong>
+<p>
+<!-- TODO: заполнить реальные ФИО и ИНН -->ИП Фамилия Юрий Отчество · ИНН XXXXXXXXXXXX</p>
+<details>
+<summary>Политика обработки персональных данных</summary>
+<p>Оператор — [ФИО, ИНН и адрес оператора]. При обращении мастер использует предоставленные вами контакты, сообщения и фотографии для оценки задачи, ответа и согласования работ. Сообщения отправляются через выбранный вами сервис связи. Для запроса об уточнении или удалении данных свяжитесь с мастером по указанному на сайте телефону.</p>
+</details>
+</div>
+</footer>
 </body>
 </html>

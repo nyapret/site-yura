@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /TZ.md
 
 Sitemap: https://polirkot.ru/sitemap.xml
